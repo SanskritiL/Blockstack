@@ -63,11 +63,17 @@ html, body {
   overflow: hidden;
   z-index: 2;
 }
+.card-purple .additional{
+    background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
 
 .card.green .additional {
   background: linear-gradient(#92bCa6, #A2CCB6);
 }
-
+.card.purple .additional{
+    background: linear-gradient(#deacf5, #9754cb);
+}
 
 .card:hover .additional {
   width: 100%;

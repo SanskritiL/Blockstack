@@ -17,13 +17,13 @@ export default function NavBar(props) {
           </li>
           <li>{props.name}</li>
           <li>
-            {/* <button
+            <button
               className="btn btn-primary btn-sm"
               id="signout-button "
               onClick = {props.onclick}
             >
               Logout
-            </button> */}
+            </button>
           </li>
           
         </ul>
