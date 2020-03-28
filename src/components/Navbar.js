@@ -3,6 +3,8 @@ import React from "react";
 export default function NavBar(props) {
   return (
   
+
+
       <nav class="navbar">
         <a class="navbar-brand">
           <img src="for.png" alt=""></img>

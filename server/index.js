@@ -7,8 +7,6 @@ const {
     getTransactions
     } = require("./controllers/controller");
 
-
-
 app.use(express.json());
 
 // Get the public token and exchange it for an access token

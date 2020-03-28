@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {PlaidLink} from "react-plaid-link";
 import axios from "axios";
-
+import Table from "./Table";
 
 
 export default class Link extends Component{
@@ -9,9 +9,11 @@ export default class Link extends Component{
    constructor(){
        super();
        this.state = {
-           transactions: []
+           transactions: [],
+           transdata:[]
        };
        this.handleCLick = this.handleClick.bind(this);
+    //    this.handleother = this.handleother.bind(this);
    }
   
    handleOnSuccess(public_token, metadata) {
@@ -27,11 +29,26 @@ export default class Link extends Component{
   }
   handleClick= (res)=> {
     axios.get("/transactions").then(res => {
-    
+          
             this.setState({ transactions: res.data });
+            console.log(this.state.transactions)
+           
      
     });
   }
+  
+
+  
+   transactionsColumns = [
+    { title: "Account", field: "account" },
+    { title: "Date", field: "date", type: "date", defaultSort: "desc" },
+    { title: "Name", field: "name" },
+    { title: "Amount", field: "amount", type: "numeric" },
+    { title: "Category", field: "category" }
+  ];
+
+
+
   render() {
     return (
      <div>
@@ -49,6 +66,9 @@ export default class Link extends Component{
         <div>
         <button style={{"marginTop": "0.5rem"}}onClick={this.handleClick}>Get Transactions</button>
       </div>
+{/* {this.state.transactions.map(account=>  <p>{account.official_name}</p>)} */}
+       
+{console.log(this.state.transactions)}
       </div>
        
     );
