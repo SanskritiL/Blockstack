@@ -7,7 +7,7 @@ export default function NavBar(props) {
 
       <nav class="navbar">
         <a class="navbar-brand">
-          <img src="for.png" alt=""></img>
+          <img src="cash.png" alt=""></img>
         </a>
         
         <ul className="navbar-listing">
@@ -17,7 +17,7 @@ export default function NavBar(props) {
             <img src={ props.avatar ? props.avatar : props.avatarFallbackImage } className="avatar avatar-navbar " id="avatar-image" alt=""/>
            
           </li>
-          <li>{props.name}</li>
+          <li style={{"color":"white"}}>{props.name}</li>
           <li>
             <button
               className="btn btn-primary btn-sm"

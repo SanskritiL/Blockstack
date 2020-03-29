@@ -4,7 +4,9 @@ import Signin from "./Signin.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import Route from "react-router-dom/Route";
 import { UserSession, AppConfig } from "blockstack";
-import Table from './components/Table'
+import Table from './components/Table';
+import Education from './components/Education';
+
 
 const appConfig = new AppConfig();
 const userSession = new UserSession({ appConfig: appConfig });
@@ -51,6 +53,15 @@ export default class App extends Component {
             return <Table />;
           }}
         />
+
+            <Route
+          path="/education"
+          exact={true}
+          render={() => {
+            return <Education />;
+          }}
+        />      
+
       </div>
     );
   }
